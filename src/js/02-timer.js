@@ -21,7 +21,7 @@ const options = {
 
       const selectedDate = selectedDates[0].getTime();
       const currentDate = Date.now();
-        deltaDate = selectedDate - currentDate;
+      deltaDate = selectedDate - currentDate;
 
       if (selectedDate < currentDate) {
           alert("Please choose a date in the future");
@@ -41,8 +41,8 @@ refs.startBtn.addEventListener('click', onStartBtnClick);
 function onStartBtnClick() {
 
     timerId = setInterval(() => {
-
-        if (deltaDate < 100) {
+console.log(deltaDate)
+        if (deltaDate < 0) {
             clearInterval(timerId);
             return
         }
